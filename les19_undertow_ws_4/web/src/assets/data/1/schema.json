@@ -1,0 +1,21 @@
+{
+  "$id": "academy.kafka.car",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Car",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "kenteken": {
+      "type": "string"
+    },
+    "make": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "tax": {
+      "type": "integer"
+    }
+  }
+}

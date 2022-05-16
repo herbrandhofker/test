@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Undertow Websocket</title>
+    <script type="module" defer src='./web/index.js'></script>
+    <style>
+        .container {
+            display: flex;
+            margin: 10px;
+            width: 300px;
+        }
+
+        .title {
+            margin: 10px;
+            height: 90px;
+        }
+
+        .messages {
+            height: 150px;
+            width: 300px;
+            margin: 10px;
+            background-color: lightgray;
+        }
+
+        .chat-form {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WebSocket Bussines Web Application : 2 meta channels and a channel for each topic</span></h1>
+
+    <div class="container">
+        <div>
+            <div id="meta-title" class="title">Data</div>
+            <div id="meta-messages" class="messages"></div>
+            <form onsubmit="return false;" class="chat-form" action="">
+                <label for="meta-msg">Message for topic "<span id="meta"></span>"</label><br />
+                <input type="text" name="message" id="meta-msg" />
+            </form>
+        </div>
+        <div>
+            <div id="control-title" class="title">Data</div>
+            <div id="control-messages" class="messages"></div>
+
+            <form onsubmit="return false;" class="chat-form" action="">
+                <label for="control-msg">Message for topic "<span id="control"></span>"</label><br />
+                <input type="text" name="message" id="control-msg" />
+            </form>
+        </div>
+        <div>
+            <div id="data-title" class="title">Data</div>
+            <div id="data-messages" class="messages"></div>
+
+            <form onsubmit="return false;" class="chat-form" action="">
+                <label for="data-msg">Message for topic "<span id="data"></span>"</label><br />
+                <input type="text" name="message" id="data-msg" />
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>

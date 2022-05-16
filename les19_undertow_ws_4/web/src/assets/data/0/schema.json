@@ -1,0 +1,152 @@
+{
+  "$id": "academy.kafka.person_demo",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Show most capabilities",
+  "description": "a full demo of all objects, records, nested record , nested array, violations",
+  "type": "object",
+  "required": [
+    "name",
+    "date",
+    "favorite_color",
+    "gender",
+    "location",
+    "pets"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name",
+      "placeholder": "give the name",
+      "description": "First and Last name",
+      "minLength": 4,
+      "default": "Pete Puck"
+    },
+    "age": {
+      "type": "integer",
+      "title": "Age",
+      "default": 25,
+      "minimum": 18,
+      "maximum": 99
+    },
+    "married": {
+      "type": "boolean",
+      "title": "Married",
+      "format": "checkbox",
+      "default": null
+    },
+    "favorite_color": {
+      "type": "string",
+      "title": "Favorite color",
+      "format": "color",
+     "default": "#f6b73c"
+    },
+    "gender": {
+      "type": "string",
+      "title": "Gender",
+      "format":"select",
+      "enum": [
+        "male",
+        "female",
+        "other"
+      ],
+      "default": "female"
+    },
+    "comment": {
+      "type": "string",
+      "title": "Comment",
+      "format":"textarea"   
+    },
+    "fruit": {
+      "type": "string",
+      "title": "Fruit",
+   
+      "format":"radio",
+      "enum": [
+        "apple",
+        "orange",
+        "banana"
+      ],
+      "default": "orange"
+    },
+    "date": {
+      "type": "string",
+      "title": "Date",
+   
+      "format": "date",
+      "options": {
+        "flatpickr": {}
+      },
+      "default": "1980-12-05"
+    },
+    "location": {
+      "type": "object",
+      "title": "Location",
+      "required": [
+        "city"
+      ],
+      "properties": {
+        "city": {
+          "type": "string",
+          "title": "City",
+       "default": "Amsterdam"
+        },
+        "state": {
+          "type": "string",
+          "title": "State",
+          "default": "NH"
+        }
+      }
+    },
+    "pets": {
+      "type": "array",
+      "title": "Pets",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "title": "Pet",
+        "required": ["type", "name"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "title": "Type Animal",
+            "format": "select",
+            "enum": [
+              "cat",
+              "dog",
+              "bird",
+              "reptile",
+              "other"
+            ],
+            "default": "bird"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+   
+          }
+        }
+      }
+    },
+    "validation_test": {
+      "type": "object",
+      "title": "Validation Test",
+      "required": ["zipcode" ],
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180
+        },
+        "zipcode": {
+          "type": "string",
+          "pattern": "[0-9]{5}"
+        }
+      }
+    }
+  }
+}

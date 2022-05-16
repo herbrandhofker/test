@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Undertow Websocket</title>
+    <style>
+        .container {
+            display: flex;
+            margin: 10px;
+        }
+
+        .control{
+            display: none;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        .form {
+             margin: 10px;
+        }
+
+        .topic {
+            margin: 10px;
+            overflow: hidden;
+        }
+
+        .key {
+            max-width: 100px;
+        }
+
+        td,
+        th {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 240px;
+        }
+
+        table,
+        thead,
+        tbody,
+        th,
+        td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>WebSocket Bussines Web Application (dbl click on record for details)</span></h1>
+    <div class="container">
+        <div id="control" class="control"></div>
+        <div id="meta"></div>
+    </div>
+
+    <div id="data" class="container"></div>
+    <script type="module" defer src='./web/index.js'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title" : "Registration",
+    "type" : "object",
+    "additionalProperties" : false,
+    "properties" : {
+      "regId" : {
+        "type" : "string",
+        "format" : "uuid"
+      },
+      "car" : {
+        "$ref" : "#/definitions/Car"
+      },
+      "person" : {
+        "$ref" : "#/definitions/Person"
+      },
+      "from" : {
+        "type" : "string"
+      },
+      "till" : {
+        "type" : "string"
+      }
+    },
+    "definitions" : {
+      "Car" : {
+        "type" : "object",
+        "additionalProperties" : false,
+        "properties" : {
+          "kenteken" : {
+            "type" : "string"
+          },
+          "make" : {
+            "type" : "string"
+          },
+          "model" : {
+            "type" : "string"
+          },
+          "tax" : {
+            "type" : "integer"
+          }
+        }
+      },
+      "Person" : {
+        "type" : "object",
+        "additionalProperties" : false,
+        "properties" : {
+          "bsn" : {
+            "type" : "string"
+          },
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          },
+          "bancAccount" : {
+            "type" : "string"
+          },
+          "birthday" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          }
+        },
+        "required" : [ "bsn", "lastName", "birthday", "city" ]
+      }
+    }
+  }

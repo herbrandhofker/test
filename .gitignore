@@ -1,0 +1,23 @@
+# we follow https://labs.consol.de/development/git/2017/02/22/gitignore.html
+*.classpath
+*.editorconfig
+*.project
+.vscode/
+*.travis.yml
+*.log
+*.factorypath
+*.vscode
+*.project
+*.lock
+*.checkpoint
+*nbactions.xml
+.settings/
+*.gitattributes
+target/
+dist/
+nbproject/
+node_modules/
+logs/
+
+*.node.exe
+les03_basic_kafka/.class_path.xml

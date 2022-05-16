@@ -1,0 +1,44 @@
+:root {
+  --primary: green;
+  --global-color: red;
+}
+
+.container {
+  display: flex;
+  margin: 10px;
+}
+
+.control{
+  display: none;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.form {
+   margin: 10px;
+}
+
+.topic {
+  margin: 10px;
+  overflow: hidden;
+}
+
+.key {
+  max-width: 100px;
+}
+
+td,
+th {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+table,
+thead,
+tbody,
+th,
+td {
+  border: 1px solid;
+}

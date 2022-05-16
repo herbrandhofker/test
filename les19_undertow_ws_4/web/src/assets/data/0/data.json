@@ -1,0 +1,32 @@
+{
+  "name": "Mary Doe-Jones",
+  "age": 35,
+  "favorite_color": "#e66465",
+  "gender": null,
+  "fruit": "banana",  
+  "date": "1980-12-10",
+  "location": {
+    "city": "Amsterdam",
+    "state": null,
+    "citystate": "San Francisco, CA"
+  },
+  "testing": {
+    "latitude": 48.858093,
+    "longitude": 2.294694,
+    "zipcode": "99999"
+  },
+  "pets": [
+    {
+      "type": "dog",
+      "name": "Kafka"
+    },
+    {
+      "type": "cat",
+      "name": "Silki"
+    },
+    {
+      "type": "bird",
+      "name": "birdee"
+    }
+  ]
+}

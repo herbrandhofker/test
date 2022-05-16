@@ -1,0 +1,21 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema#",
+  "title" : "Notification",
+  "type" : "object",
+  "additionalProperties" : false,
+  "properties" : {
+    "bsn" : {
+      "type" : "string"
+    },
+    "kenteken" : {
+      "type" : "string"
+    },
+    "registrationId" : {
+      "type" : "string"
+    },
+    "message" : {
+      "type" : "string"
+    }
+  },
+  "required" : [ "bsn", "message" ]
+}
